@@ -51,6 +51,13 @@ const EditListingDescriptionFormComponent = props => (
       const descriptionPlaceholderMessage = intl.formatMessage({
         id: 'EditListingDescriptionForm.descriptionPlaceholder',
       });
+      const buildingInfoTitle = intl.formatMessage({
+        id: 'EditListingDescriptionForm.buildingInfoTitle',
+      });
+      const buildingInfoPlaceholderMessage = intl.formatMessage({
+        id: 'EditListingDescriptionForm.buildingInfoPlaceholderMessage',
+      });
+    
       const maxLength60Message = maxLength(maxLengthMessage, TITLE_MAX_LENGTH);
       const descriptionRequiredMessage = intl.formatMessage({
         id: 'EditListingDescriptionForm.descriptionRequired',
@@ -106,6 +113,15 @@ const EditListingDescriptionFormComponent = props => (
             label={descriptionMessage}
             placeholder={descriptionPlaceholderMessage}
             validate={composeValidators(required(descriptionRequiredMessage))}
+          />
+
+          <FieldTextInput
+            id="buildingInfo"
+            name="buildingInfo"
+            className={css.buildingInfo}
+            type="textarea"
+            label={buildingInfoTitle}
+            placeholder={buildingInfoPlaceholderMessage}
           />
 
           <CustomCategorySelectFieldMaybe

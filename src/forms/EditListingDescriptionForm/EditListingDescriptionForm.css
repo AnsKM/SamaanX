@@ -49,6 +49,12 @@
   flex-shrink: 0;
 }
 
+.buildingInfo {
+  @apply --EditListingDescriptionForm_formMargins;
+  flex-shrink: 0;
+  color: var(--marketplaceColor);
+}
+
 .category {
   @apply --EditListingDescriptionForm_formMargins;
 }
