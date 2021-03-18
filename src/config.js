@@ -65,7 +65,7 @@ const sdkBaseUrl = process.env.REACT_APP_SHARETRIBE_SDK_BASE_URL;
 const sdkTransitVerbose = process.env.REACT_APP_SHARETRIBE_SDK_TRANSIT_VERBOSE === 'true';
 
 const curr = process.env.REACT_APP_SHARETRIBE_MARKETPLACE_CURRENCY;
-const currency = curr.toUpperCase();
+const currency = curr ? curr.toUpperCase() : curr;
 
 // Currency formatting options.
 // See: https://github.com/yahoo/react-intl/wiki/API#formatnumber
